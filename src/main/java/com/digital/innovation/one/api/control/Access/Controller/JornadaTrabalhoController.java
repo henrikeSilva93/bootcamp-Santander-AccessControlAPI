@@ -39,8 +39,8 @@ public class JornadaTrabalhoController {
     }
 
   @PutMapping
-    public void UpadateJornada( @RequestBody JornadaTrabalho jornadaTrabalho) throws Exception {
-         jornadaTrabalhoService.update(jornadaTrabalho);
+    public JornadaTrabalho UpadateJornada( @RequestBody JornadaTrabalho jornadaTrabalho) throws Exception {
+         return jornadaTrabalhoService.update(jornadaTrabalho);
   }
 
   @DeleteMapping("/{id}")

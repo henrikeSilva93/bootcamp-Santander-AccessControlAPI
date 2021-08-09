@@ -1,6 +1,7 @@
 package com.digital.innovation.one.api.control.Access.Model;
 
 import lombok.*;
+import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
@@ -9,9 +10,10 @@ import javax.validation.constraints.NotNull;
 @Entity
 @Setter
 @Getter
+@EnableJpaAuditing
 public class JornadaTrabalho {
     @Id
-    @GeneratedValue(strategy =  GenerationType.IDENTITY)
+    @GeneratedValue()
     private Long id;
     private String descricao;
 
