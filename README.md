@@ -6,3 +6,4 @@ Projeto de controle de acesso de funcionários do bootcamp Santander pela Digita
 -  Desenvolvimento de uma API Rest
 -  Criação de Entidades usando JPA (Java Persistance API) 
 - Configuração e Inicialização de um projeto Spring boot
+- - Documentação de API com Swagger (Spring fox)
