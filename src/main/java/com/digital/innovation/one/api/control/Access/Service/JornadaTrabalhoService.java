@@ -25,7 +25,9 @@ public class JornadaTrabalhoService {
         return jornadaTrabalhoRepository.findById(id);
     }
 
-    public void update(long id, JornadaTrabalho jornadaTrabalho) throws Exception {
+    public String update(JornadaTrabalho jornadaTrabalho) throws Exception {
+            jornadaTrabalhoRepository.save(jornadaTrabalho);
+            return "Jornada Salva";
 
     }
 

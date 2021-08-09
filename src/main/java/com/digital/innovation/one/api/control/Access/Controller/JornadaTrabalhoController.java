@@ -38,9 +38,9 @@ public class JornadaTrabalhoController {
         return jornadaTrabalhoService.Save(jornadaTrabalho);
     }
 
-  @PutMapping("/{id}")
-    public void UpadateJornada(@PathVariable("id") Long id, @RequestBody JornadaTrabalho jornadaTrabalho) throws Exception {
-         jornadaTrabalhoService.update(id, jornadaTrabalho);
+  @PutMapping
+    public void UpadateJornada( @RequestBody JornadaTrabalho jornadaTrabalho) throws Exception {
+         jornadaTrabalhoService.update(jornadaTrabalho);
   }
 
   @DeleteMapping("/{id}")
