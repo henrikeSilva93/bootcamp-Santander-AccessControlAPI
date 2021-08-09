@@ -25,11 +25,12 @@ public class JornadaTrabalhoService {
         return jornadaTrabalhoRepository.findById(id);
     }
 
-    public JornadaTrabalho update(JornadaTrabalho jornadaTrabalho){
-        return jornadaTrabalhoRepository.save(jornadaTrabalho);
+    public void update(long id, JornadaTrabalho jornadaTrabalho) throws Exception {
+
     }
 
     public  void delete(Long id) {
-        jornadaTrabalhoRepository.deleteById(id);
+       var j = jornadaTrabalhoRepository.findById(id);
+       if(j.isPresent()) jornadaTrabalhoRepository.deleteById(id);
     }
 }

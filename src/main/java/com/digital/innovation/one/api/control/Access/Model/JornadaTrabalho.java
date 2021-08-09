@@ -6,10 +6,9 @@ import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 
 @Data
-@Value
-@Builder
 @Entity
-@ToString
+@Setter
+@Getter
 public class JornadaTrabalho {
     @Id
     @GeneratedValue(strategy =  GenerationType.IDENTITY)

@@ -24,8 +24,8 @@ public class JornadaTrabalhoController {
         System.out.println(jornadaTrabalhoService.findAll());
         return jornadaTrabalhoService.findAll();
     }
-    @GetMapping("jornada/{id}")
-    public JornadaTrabalho getJornadaById(@PathVariable(value = "id") Long id){
+    @GetMapping("/{id}")
+    public JornadaTrabalho getJornadaById(@PathVariable("id") Long id){
         return jornadaTrabalhoService.findById(id).orElseThrow(()-> new NoSuchElementException());
 
 
@@ -38,13 +38,13 @@ public class JornadaTrabalhoController {
         return jornadaTrabalhoService.Save(jornadaTrabalho);
     }
 
-  @PutMapping
-    public JornadaTrabalho UpadateJornada(@RequestBody JornadaTrabalho jornadaTrabalho){
-        return jornadaTrabalhoService.update(jornadaTrabalho);
+  @PutMapping("/{id}")
+    public void UpadateJornada(@PathVariable("id") Long id, @RequestBody JornadaTrabalho jornadaTrabalho) throws Exception {
+         jornadaTrabalhoService.update(id, jornadaTrabalho);
   }
 
-  @DeleteMapping("jornada/{id}")
-  public void deletarJornada(@PathVariable(value = "id") Long id){
+  @DeleteMapping("/{id}")
+  public void deletarJornada(@PathVariable("id") Long id){
         jornadaTrabalhoService.delete(id);
   }
 
